@@ -46,6 +46,7 @@ const code2: string = `<template>
     ref="xtable"
     :url="url"
     :columns="columns"
+    :search-params="customizeForm"
   >
     <template v-slot:searchform>
       <el-form :inline="true" :model="customizeForm" size="small">
@@ -142,7 +143,7 @@ const code2: string = `<template>
     },
     methods:{
       search() {
-        this.$refs.xtable.reflashTableData(this.customizeForm);
+        this.$refs.xtable.reflashTableData();
       }
     }
   }

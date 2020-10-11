@@ -2,7 +2,7 @@
  * @Author: xry
  * @Description:
  * @Date: 2020-09-16 11:42:45
- * @LastEditTime: 2020-10-11 16:01:26
+ * @LastEditTime: 2020-10-12 01:04:33
  * @FilePath: /dev2/Users/roey/Desktop/Hui/rui/src/views/xtableview/index.vue
 -->
 <template>
@@ -32,7 +32,13 @@
       <examplebox :code="demo2.code" :title="demo2.title" :notes="demo2.notes">
         <template v-slot:sourse>
           <p>使用插槽方式，调用内部函数 reflashTableData(params)。</p>
-          <x-table ref="xtable2" :url="url" :columns="simpleColumns" :dualfuns="dualfuns">
+          <x-table
+            ref="xtable2"
+            :url="url"
+            :search-params="customizeForm"
+            :columns="simpleColumns"
+            :dualfuns="dualfuns"
+          >
             <template v-slot:searchform>
               <el-form :inline="true" :model="customizeForm" size="small">
                 <el-form-item label="姓名">
@@ -213,7 +219,8 @@ export default {
   data() {
     return {
       title: "Table 通用表格",
-      description: "在 ElementUI 表格的基础上集成了筛选框、表单、动态计算表格宽度、单选、多选等功能的表格",
+      description:
+        "在 ElementUI 表格的基础上集成了筛选框、表单、动态计算表格宽度、单选、多选等功能的表格",
       options: options,
       demo1: {
         title: "基础使用",
@@ -710,7 +717,7 @@ export default {
       return "";
     },
     search() {
-      this.$refs.xtable2.reflashTableData(this.customizeForm);
+      this.$refs.xtable2.reflashTableData();
     }
   }
 };

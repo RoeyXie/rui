@@ -2,7 +2,7 @@
  * @Author: xry
  * @Description:
  * @Date: 2019-12-23 15:06:29
- * @LastEditTime: 2020-09-25 18:32:55
+ * @LastEditTime: 2020-10-12 00:53:46
  * @FilePath: /dev2/Users/roey/Desktop/Hui/rui/src/views/layoutview/index.vue
 -->
 <script>
@@ -52,9 +52,7 @@ export default defineComponent({
         code: code.code5
       }
     });
-    onMounted(() => {
-      axios("/local/getUserTable", { params: { userName: "谢蕊伊" } }).then(data => console.log(data));
-    });
+    onMounted(() => {});
     return {
       ...toRefs(state)
     };
