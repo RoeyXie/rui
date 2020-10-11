@@ -1,0 +1,51 @@
+//字数溢出省略号
+@mixin ellipsis($line: 1) {
+    @if $line==1 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    @if $line>1 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: $line;
+        -webkit-box-orient: vertical;
+    }
+}
+
+//flex居中
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//flex垂直居中
+@mixin flex-column-center {
+    @include flex-center;
+    flex-direction: column;
+}
+
+//position居中
+@mixin position-center($position: absolute) {
+    position: $position;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//光标颜色（兼容写法）
+@mixin caretColor($setColor, $initColor) {
+    color: $initColor;
+    caret-color: $setColor;
+
+    @supports (-webkit-mask: none) and (not (cater-color: $setColor)) {
+        color: $setColor;
+
+        &::first-line {
+            color: $initColor;
+        }
+    }
+}

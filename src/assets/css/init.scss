@@ -1,0 +1,136 @@
+@import "./var.scss";
+@import "./status.scss";
+@import '../font/iconfont.css';
+
+:root {
+  * {
+    box-sizing: border-box;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+// 重写a样式
+a {
+  color: $theme-color;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+// 清除浮动
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+// 单行文字超出省略号
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+// 绝对定位居中
+.position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate((-50%, -50%));
+}
+
+h3 {
+  font-weight: 400;
+  color: #1f2f3d;
+  margin: 0;
+  font-size: 22px;
+  padding: 55px 0 20px;
+}
+
+h2 {
+  font-weight: 400;
+  color: #1f2f3d;
+  font-size: 28px;
+}
+
+p {
+  font-size: 14px;
+  color: #5e6d82;
+}
+
+.hljs-tag {
+  color: #3182bd;
+}
+
+.hljs-string {
+  color: #756bb1;
+}
+
+.hljs-literal {
+  color: #31a354;
+}
+.hljs-attribute {
+  color: #e6550d;
+}
+.hljs-comment,
+.hljs-quote {
+  color: #636363;
+}
+
+.warning {
+  padding: 8px 16px;
+  background-color: #fff6f7;
+  border-radius: 4px;
+  border-left: 5px solid #fe6c6f;
+  margin: 20px 0;
+}
+
+.tips {
+  padding: 8px 16px;
+  background-color: #ecf8ff;
+  border-radius: 4px;
+  border-left: 5px solid #50bfff;
+  margin: 20px 0;
+}
+
+pre {
+  font-family: Menlo, Monaco, Consolas, Courier, monospace;
+  font-weight: 400;
+}
+
+code {
+  // font-family: Menlo, Monaco, Consolas, Courier, monospace;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: #f9fafc;
+  padding: 0 4px;
+  // border: 1px solid #eaeefb;
+  border-radius: 4px;
+}
+
+.suchas {
+  code {
+    // color: #5e6d82;
+    // background-color: #e6effb;
+    line-height: 18px;
+  }
+}

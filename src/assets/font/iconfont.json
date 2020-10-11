@@ -1,0 +1,37 @@
+{
+  "id": "1165454",
+  "name": "firstProject",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "343898",
+      "name": "向下2",
+      "font_class": "xiangxiajiantou",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "3905967",
+      "name": "zhcc_向上箭头1",
+      "font_class": "xiangshangjiantou",
+      "unicode": "e688",
+      "unicode_decimal": 59016
+    },
+    {
+      "icon_id": "14414698",
+      "name": "上",
+      "font_class": "xiangxia",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "14559129",
+      "name": "上",
+      "font_class": "xiangshang",
+      "unicode": "e6a3",
+      "unicode_decimal": 59043
+    }
+  ]
+}

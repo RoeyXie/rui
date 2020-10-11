@@ -1,0 +1,230 @@
+//global
+$color-blue: #26a2ff;
+$color-white: #fff;
+$color-gray: #d9d9d9;
+$border-color: #c8c8cd;
+$success-color: #67c23a;
+$error-color: #f44336;
+$danger-color: #f56c6c;
+$warning-color: #e6a23c;
+$info-color: #909394;
+
+$color-blue-bg: #ecf5ff;
+$success-color-bg: #f0f9eb;
+$danger-color-bg: #fef0f0;
+$warning-color-bg: #fdf6ec;
+$info-color-bg: #f4f4f5;
+
+$color-blue-bd: #d9ecff;
+$success-color-bd: #e1f3d8;
+$danger-color-bd: #fde2e2;
+$warning-color-bd: #faecd8;
+$info-color-bd: #e9e9eb;
+
+$color-blue-hover: #66b1ff;
+$success-color-hover: #85ce61;
+$danger-color-hover: #f78989;
+$warning-color-hover: #ebb563;
+$info-color-hover: #a6a9ad;
+
+$color-blue-disable: #a0cfff;
+$success-color-disable: #b3e19d;
+$danger-color-disable: #fab6b6;
+$warning-color-disable: #f3d19e;
+$info-color-disable: #c8c9cc;
+
+$hover-color: #c0c4cc;
+$black-text-color: #303133;
+$bd-color: #dcdfe6;
+
+//base
+$input-border-color: $bd-color;
+$input-text-color: #606266;
+$input-border-color-hover: $hover-color;
+$input-active-color: $color-blue;
+$input-disable-color-bg: #f5f7fa;
+$input-icon-hover-color: #909399;
+$input-icon-color: $hover-color;
+//z-index
+$msg-index: 9999;
+$load-index: 9999;
+$msg-box-index: 9999;
+$shade-index: 2;
+$header-footer-index: 1;
+//h-header
+$header-height: 0.8rem;
+//h-button
+$btn-primary-color: $color-blue;
+$btn-success-color: $success-color;
+$btn-info-color: $info-color;
+$btn-warning-color: $warning-color;
+$btn-danger-color: $danger-color;
+
+$btn-primary-color-hover: $color-blue-hover;
+$btn-success-color-hover: $success-color-hover;
+$btn-info-color-hover: $info-color-hover;
+$btn-warning-color-hover: $warning-color-hover;
+$btn-danger-color-hover: $danger-color-hover;
+
+$btn-primary-disable-bg: $color-blue-bg;
+$btn-success-disable-bg: $success-color-bg;
+$btn-info-disable-bg: $info-color-bg;
+$btn-warning-disable-bg: $warning-color-bg;
+$btn-danger-disable-bg: $danger-color-bg;
+
+$btn-primary-disable-bd: $color-blue-bd;
+$btn-success-disable-bd: $success-color-bd;
+$btn-info-disable-bd: $info-color-bd;
+$btn-warning-disable-bd: $warning-color-bd;
+$btn-danger-disable-bd: $danger-color-bd;
+
+$btn-primary-disable: $color-blue-disable;
+$btn-success-disable: $success-color-disable;
+$btn-info-disable: $info-color-disable;
+$btn-warning-disable: $warning-color-disable;
+$btn-danger-disable: $danger-color-disable;
+
+//h-tag
+$tag-default-color: $color-blue;
+$tag-success-color: $success-color;
+$tag-info-color: $info-color;
+$tag-warning-color: $warning-color;
+$tag-danger-color: $danger-color;
+
+$tag-default-color-bg: $color-blue-bg;
+$tag-success-color-bg: $success-color-bg;
+$tag-info-color-bg: $info-color-bg;
+$tag-warning-color-bg: $warning-color-bg;
+$tag-danger-color-bg: $danger-color-bg;
+
+$tag-default-color-bd: $color-blue-bd;
+$tag-success-color-bd: $success-color-bd;
+$tag-info-color-bd: $info-color-bd;
+$tag-warning-color-bd: $warning-color-bd;
+$tag-danger-color-bd: $danger-color-bd;
+
+$tag-default-color-hover: $color-blue-hover;
+$tag-success-color-hover: $success-color-hover;
+$tag-info-color-hover: $info-color-hover;
+$tag-warning-color-hover: $warning-color-hover;
+$tag-danger-color-hover: $danger-color-hover;
+
+//h-alert
+$alert-success-color: $success-color;
+$alert-info-color: $info-color;
+$alert-warning-color: $warning-color;
+$alert-error-color: $danger-color;
+
+$alert-success-color-bg: $success-color-bg;
+$alert-info-color-bg: $info-color-bg;
+$alert-warning-color-bg: $warning-color-bg;
+$alert-error-color-bg: $danger-color-bg;
+
+$alert-close-icon-color: $hover-color;
+
+//h-message
+$message-success-color-bd: $success-color-bd;
+$message-error-color-bd: $danger-color-bd;
+$message-warning-color-bd: $warning-color-bd;
+$message-info-color-bd: $info-color-bd;
+
+//h-notification
+$notification-success-color-bd: $success-color-bd;
+$notification-error-color-bd: $danger-color-bd;
+$notification-warning-color-bd: $warning-color-bd;
+$notification-info-color-bd: $info-color-bd;
+$notification-message-color: $input-text-color;
+$notification-title-color: $black-text-color;
+
+//h-radio
+$radio-disabled-color: $hover-color;
+$radio-selected-color: $color-blue;
+
+$radio-boder-color: $bd-color;
+$radio-disabled-bgcolor: #f2f6fc;
+
+//h-divider
+
+$divider-text-color: $black-text-color;
+$divider-bg-color: $bd-color;
+
+//h-rate
+
+$rate-text-color: $input-text-color;
+
+//h-cell
+$cell-value-color: #888;
+$cell-link-icon-color: rgb(200, 200, 205);
+//h-tab-bar
+$tab-bar-bg-color: #fafafa;
+$tab-bar-active-color: #eaeaea;
+//h-action-sheet
+$action-sheet-bg-color: #e0e0e0;
+$action-sheet-active-bg-color: #f0f0f0;
+$action-sheet-item-bg-color: $color-white;
+$action-sheet-text-color: #333;
+//h-msg-box
+$msg-box-bg-color: $color-white;
+$msg-box-active-bg-color: #f0f0f0;
+$msg-box-msg-text-color: #999;
+$msg-box-bottom-text-color: $color-blue;
+$msg-box-input-border-color: gray;
+//h-search
+$search-bg-color: #d9d9d9;
+//h-form(所有表单模块)
+
+$disabled-color: #d9d9d9;
+
+$switch-lable-color: $bd-color;
+$switch-text-color: $black-text-color;
+
+$checklist-border-color: #ccc;
+$checklist-title-color: #888;
+
+$radio-border-color: #ccc;
+$radio-title-color: #888;
+
+//picker
+$picker-color: #707274;
+$picker-active-color: #000;
+
+//index-list
+$index-list-header-bg-color: #fafafa;
+
+//h-progress
+$progress-outer-bg-color: #ebeef5;
+$progress-inner-bg-color: $color-blue;
+$progress-success-color: $success-color;
+$progress-error-color: $danger-color;
+$progress-warning-color: $warning-color;
+$progress-text-color: $input-text-color;
+
+//h-link
+//default/ primary / success / warning / danger / info
+$link-default-color: $input-text-color;
+$link-primary-color: $color-blue;
+$link-success-color: $success-color;
+$link-warning-color: $warning-color;
+$link-danger-color: $danger-color;
+$link-info-color: $input-icon-hover-color;
+
+$link-default-hover-color: $color-blue;
+$link-primary-hover-color: $color-blue-hover;
+$link-success-hover-color: $success-color-hover;
+$link-warning-hover-color: $warning-color-hover;
+$link-danger-hover-color: $danger-color-hover;
+$link-info-hover-color: $info-color-hover;
+
+$link-primary-disable-color: $color-blue-disable;
+$link-success-disable-color: $success-color-disable;
+$link-danger-disable-color: $danger-color-disable;
+$link-warning-disable-color: $warning-color-disable;
+$link-info-disable-color: $info-color-disable;
+$link-default-disable-color: $info-color-disable;
+
+// primary / success / warning / danger / info
+$timeline-primary-color: $color-blue;
+$timeline-success-color: $success-color;
+$timeline-warning-color: $warning-color;
+$timeline-danger-color: $danger-color;
+$timeline-info-color: $input-icon-hover-color;
