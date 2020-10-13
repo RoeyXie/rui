@@ -204,7 +204,7 @@ export const menuList: MenuList[] = [
   {
     menuId: 7,
     parentId: 0,
-    name: "Test",
+    name: "基于element-UI二次封装",
     url: "",
     list: [
       {

@@ -2,7 +2,7 @@
  * @Author: xry
  * @Description:
  * @Date: 2020-09-25 19:01:15
- * @LastEditTime: 2020-09-27 23:27:57
+ * @LastEditTime: 2020-10-13 17:52:41
  * @FilePath: /dev2/Users/roey/Desktop/Hui/rui/src/package/components/content/RContent.vue
 -->
 <template>
@@ -126,11 +126,13 @@ export default {
     padding: 20px;
   }
   .r-content-fix {
-    width: 200px;
-    padding: 20px;
+    width: 160px;
+    margin: 20px;
     position: fixed;
-    right: 0px;
-    top: 60px;
+    right: 0;
+    top: 61px;
+    background: #ffffff;
+    z-index: 99;
   }
 }
 </style>
