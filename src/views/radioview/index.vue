@@ -131,14 +131,10 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code";
 
 export default {
   name: "radioviewapp",
-  components: {
-    Examplebox
-  },
   data() {
     return {
       radio: 3,

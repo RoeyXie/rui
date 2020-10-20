@@ -1,13 +1,9 @@
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code";
 import { defineComponent, reactive, toRefs } from "@vue/composition-api";
 
 export default defineComponent({
   name: "lineview",
-  components: {
-    Examplebox
-  },
   setup() {
     let state = reactive({
       title: "Link 文字链接",

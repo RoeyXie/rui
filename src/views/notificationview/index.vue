@@ -120,14 +120,10 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code";
 
 export default {
   name: "notificationviewapp",
-  components: {
-    Examplebox
-  },
   data() {
     return {
       title: "Notification 通知",

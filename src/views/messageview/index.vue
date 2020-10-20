@@ -73,14 +73,10 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code";
 
 export default {
   name: "messageview",
-  components: {
-    Examplebox
-  },
   data() {
     return {
       title: "Message 消息提示",

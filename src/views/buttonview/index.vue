@@ -1,13 +1,9 @@
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code.ts";
 import { defineComponent, reactive, toRefs } from "@vue/composition-api";
 
 export default defineComponent({
   name: "buttonviewapp",
-  components: {
-    Examplebox
-  },
   setup() {
     const state = reactive({
       title: "Button 按钮",

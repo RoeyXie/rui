@@ -91,14 +91,10 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code";
 
 export default {
   name: "cardviewapp",
-  components: {
-    Examplebox
-  },
   data() {
     return {
       title: "Card 卡片",

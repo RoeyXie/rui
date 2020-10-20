@@ -93,14 +93,10 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code";
 
 export default {
   name: "tabsview",
-  components: {
-    Examplebox
-  },
   data() {
     return {
       title: "Tabs 标签页",

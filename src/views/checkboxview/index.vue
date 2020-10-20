@@ -159,14 +159,11 @@
   </div>
 </template>
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from './code.ts'
 const cityOptions = ["上海", "北京", "广州", "深圳"];
+
 export default {
   name: "checkboxviewapp",
-  components: {
-    Examplebox
-  },
   data() {
     return {
       title: "Checkbox 多选框",

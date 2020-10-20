@@ -241,14 +241,10 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code.ts";
 
 export default {
   name: "inputviewapp",
-  components: {
-    Examplebox
-  },
   data() {
     return {
       title: "Input 输入框",

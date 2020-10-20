@@ -87,14 +87,10 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code";
 
 export default {
   name: "rateviewapp",
-  components: {
-    Examplebox
-  },
   data() {
     return {
       title: "Rate 评分",

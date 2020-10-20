@@ -2,7 +2,7 @@
  * @Author: xry
  * @Description:
  * @Date: 2020-09-04 18:55:18
- * @LastEditTime: 2020-09-25 18:28:37
+ * @LastEditTime: 2020-10-20 15:42:51
  * @FilePath: /dev2/Users/roey/Desktop/Hui/rui/src/views/dividerview/index.vue
 -->
 <template>
@@ -55,14 +55,10 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code";
 
 export default {
   name: "dividerviewapp",
-  components: {
-    Examplebox
-  },
   data(){
     return {
       title: "Divider 分割线",

@@ -2,7 +2,7 @@
  * @Author: xry
  * @Description:
  * @Date: 2020-09-17 16:11:42
- * @LastEditTime: 2020-09-27 17:38:10
+ * @LastEditTime: 2020-10-20 15:45:10
  * @FilePath: /dev2/Users/roey/Desktop/Hui/rui/src/views/xformview/index.vue
 -->
 <template>
@@ -143,7 +143,6 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code.ts";
 import OptionsTable from "@/components/OptionsTable";
 import options from "./options.ts";
@@ -151,7 +150,6 @@ import options from "./options.ts";
 export default {
   name: "xformview",
   components: {
-    Examplebox,
     OptionsTable
   },
   data() {

@@ -2,7 +2,7 @@
  * @Author: xry
  * @Description:
  * @Date: 2020-09-04 17:26:30
- * @LastEditTime: 2020-09-25 18:23:18
+ * @LastEditTime: 2020-10-20 15:42:01
  * @FilePath: /dev2/Users/roey/Desktop/Hui/rui/src/views/breadcrumbview/index.vue
 -->
 <template>
@@ -51,14 +51,10 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code";
 
 export default {
   name: "breadcrumbview",
-  components: {
-    Examplebox
-  },
   data() {
     return {
       title: "Breadcrumb 面包屑",

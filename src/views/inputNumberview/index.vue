@@ -168,14 +168,10 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code";
 
 export default {
   name: "inputNumberviewapp",
-  components: {
-    Examplebox
-  },
   data() {
     return {
       title: "InputNumber 计数器",

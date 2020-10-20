@@ -137,14 +137,10 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code";
 
 export default {
   name: "stepview",
-  components: {
-    Examplebox
-  },
   data() {
     return {
       title: "Steps 步骤条",

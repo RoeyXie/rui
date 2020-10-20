@@ -2,20 +2,16 @@
  * @Author: xry
  * @Description:
  * @Date: 2019-12-23 15:06:29
- * @LastEditTime: 2020-10-12 00:53:46
+ * @LastEditTime: 2020-10-20 15:43:28
  * @FilePath: /dev2/Users/roey/Desktop/Hui/rui/src/views/layoutview/index.vue
 -->
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code.ts";
 import axios from "axios";
 import { defineComponent, reactive, toRefs, onMounted } from "@vue/composition-api";
 
 export default defineComponent({
   name: "layoutviewapp",
-  components: {
-    Examplebox
-  },
   setup() {
     const state = reactive({
       title: "Layout 布局",

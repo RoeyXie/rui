@@ -118,14 +118,10 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code";
 
 export default {
   name: "tagview",
-  components: {
-    Examplebox
-  },
   data() {
     return {
       title: "Tag 标签",

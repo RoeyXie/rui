@@ -27,13 +27,9 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code.ts";
 export default {
   name: "Hidescrollview",
-  components: {
-    Examplebox
-  },
   data() {
     return {
       title: "HideScroll 隐藏滚动条",

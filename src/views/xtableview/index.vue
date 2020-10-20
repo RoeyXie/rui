@@ -2,7 +2,7 @@
  * @Author: xry
  * @Description:
  * @Date: 2020-09-16 11:42:45
- * @LastEditTime: 2020-10-12 01:04:33
+ * @LastEditTime: 2020-10-20 15:45:19
  * @FilePath: /dev2/Users/roey/Desktop/Hui/rui/src/views/xtableview/index.vue
 -->
 <template>
@@ -204,7 +204,6 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import OptionsTable from "@/components/OptionsTable";
 import options from "./options.ts";
 import code from "./code.ts";
@@ -213,7 +212,6 @@ const time = require("time-formater");
 export default {
   name: "Xtableview",
   components: {
-    Examplebox,
     OptionsTable
   },
   data() {

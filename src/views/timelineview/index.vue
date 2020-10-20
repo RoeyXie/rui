@@ -78,14 +78,10 @@
   </div>
 </template>
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code";
 
 export default {
   name: "timelineview",
-  components: {
-    Examplebox
-  },
   data() {
     return {
       title: "Timeline 时间线",

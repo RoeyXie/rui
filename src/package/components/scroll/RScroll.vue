@@ -2,11 +2,11 @@
  * @Author: xry
  * @Description: 滚动
  * @Date: 2020-09-25 15:50:11
- * @LastEditTime: 2020-09-25 16:57:09
+ * @LastEditTime: 2020-10-20 11:10:13
  * @FilePath: /dev2/Users/roey/Desktop/Hui/rui/src/package/components/scroll/RScroll.vue
 -->
 <template>
-  <div class="r-scroll" :style="scrollStyle" @scroll="onScroll" ref="scroll">
+  <div class="r-scroll" :style="scrollStyle" @scroll.passive="onScroll" ref="scroll">
     <slot></slot>
   </div>
 </template>

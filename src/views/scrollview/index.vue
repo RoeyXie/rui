@@ -2,7 +2,7 @@
  * @Author: xry
  * @Description:
  * @Date: 2020-09-25 15:51:42
- * @LastEditTime: 2020-09-27 17:45:30
+ * @LastEditTime: 2020-10-20 15:44:24
  * @FilePath: /dev2/Users/roey/Desktop/Hui/rui/src/views/scrollview/index.vue
 -->
 <template>
@@ -55,13 +55,9 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code.ts";
 export default {
   name: "scrollview",
-  components: {
-    Examplebox
-  },
   data() {
     return {
       title: "Scroll 滚动",

@@ -2,8 +2,8 @@
  * @Author: xry
  * @Description:
  * @Date: 2020-09-04 19:43:26
- * @LastEditTime: 2020-09-04 19:44:04
- * @FilePath: /Hui/rui/src/views/calendarview/index.vue
+ * @LastEditTime: 2020-10-20 15:42:16
+ * @FilePath: /dev2/Users/roey/Desktop/Hui/rui/src/views/calendarview/index.vue
 -->
 <template>
   <div class="calendarviewapp">
@@ -22,13 +22,8 @@
   </div>
 </template>
 <script>
-import Examplebox from "@/components/Examplebox";
-
 export default {
   name: "calendarview",
-  components: {
-    Examplebox
-  },
   data() {
     return { value: new Date() };
   }

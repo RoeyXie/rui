@@ -74,14 +74,10 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code.ts";
 
 export default {
   name: "switchview",
-  components: {
-    Examplebox
-  },
   data() {
     return {
       title: "Switch 开关",

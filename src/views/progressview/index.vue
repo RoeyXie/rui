@@ -115,14 +115,10 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code";
 
 export default {
   name: "progressviewapp",
-  components: {
-    Examplebox
-  },
   data() {
     return {
       title: "Progress 进度条",

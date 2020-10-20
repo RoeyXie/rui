@@ -117,14 +117,10 @@
 </template>
 
 <script>
-import Examplebox from "@/components/Examplebox";
 import code from "./code";
 
 export default {
   name: "alertviewapp",
-  components: {
-    Examplebox
-  },
   data() {
     return {
       title: "Alert 警告",
