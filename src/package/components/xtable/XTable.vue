@@ -2,8 +2,8 @@
  * @Author: xry
  * @Description:
  * @Date: 2020-09-04 19:23:46
- * @LastEditTime: 2020-09-23 00:55:25
- * @FilePath: /dev2/Users/roey/Desktop/Hui/rui/src/package/components/xtable/XTable.vue
+ * @LastEditTime: 2020-10-23 17:56:02
+ * @FilePath: /Hui/rui/src/package/components/xtable/XTable.vue
 -->
 <template>
   <div class="x-table">
@@ -18,7 +18,7 @@
           inline
           size="small"
         >
-          <template v-slot:searchBtn>
+          <template #searchBtn>
             <el-button
               v-loading="tableLoading"
               @click="reflashTableData"
@@ -68,7 +68,7 @@
         />
         <!-- 单选按钮 -->
         <el-table-column v-if="isSingleSelect" label="选择" width="55">
-          <template slot-scope="scope">
+          <template #default="scope">
             <el-radio v-model="radio" :label="scope.row[rowKeys.id]">{{ test }}</el-radio>
           </template>
         </el-table-column>
@@ -88,7 +88,7 @@
           :width="toolWidth"
           align="center"
         >
-          <template slot-scope="{ row }">
+          <template #default="{ row }">
             <span ref="hhh">
               <slot name="tool" :row="row"></slot>
               <el-button
@@ -162,16 +162,18 @@
         ref="operateForm"
       >
       </x-form>
-      <div slot="footer" class="dialog-footer" style="text-align:center">
-        <el-button @click="closedialog" size="small">关 闭</el-button>
-        <el-button
-          v-if="['edit', 'add'].includes(operate.type)"
-          type="primary"
-          @click="save"
-          size="small"
-          >保 存</el-button
-        >
-      </div>
+      <template #footer>
+        <div class="dialog-footer" style="text-align:center">
+          <el-button @click="closedialog" size="small">关 闭</el-button>
+          <el-button
+            v-if="['edit', 'add'].includes(operate.type)"
+            type="primary"
+            @click="save"
+            size="small"
+            >保 存</el-button
+          >
+        </div>
+      </template>
     </el-dialog>
   </div>
 </template>

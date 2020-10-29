@@ -2,8 +2,8 @@
  * @Author: xry
  * @Description:
  * @Date: 2020-09-17 10:27:55
- * @LastEditTime: 2020-09-22 23:52:03
- * @FilePath: /dev2/Users/roey/Desktop/Hui/rui/src/package/components/xtable/XTableColumn.vue
+ * @LastEditTime: 2020-10-23 20:35:22
+ * @FilePath: /Hui/rui/src/package/components/xtable/XTableColumn.vue
 -->
 <template>
   <el-table-column
@@ -14,8 +14,8 @@
     :align="column.align || 'center'"
     v-bind="column"
   >
-    <template slot-scope="{ row, $index }">
-      <slot :name="column.key" :row="row" :index="$index">
+    <template #default="{ row, $index }">
+      <slot :name="column.key" :row="row" :$index="$index">
         {{ row[column.key] }}
       </slot>
     </template>
@@ -28,10 +28,9 @@
         <!-- 关键：将传入的具名插槽声明透传 -->
         <template
           v-for="columnKey of getColumnKeys(childColumn)"
-          :slot="columnKey"
-          slot-scope="{ row, index }"
+          #[columnKey]="{ row, $index }"
         >
-          <slot :name="columnKey" :row="row" :index="index"> </slot>
+          <slot :name="columnKey" :row="row" :$index="$index"> </slot>
         </template>
       </x-table-column>
     </template>

@@ -1,56 +1,20 @@
-<template>
-  <transition name="close_message_slide" @after-leave="handleAfterLeave">
-    <div
-      :class="messageappClass"
-      v-show="!closed"
-      @mouseenter="clearTimer"
-      @mouseleave="startTimer"
-      :style="msgStyle"
-    >
-      <div class="message_content">
-        <i :class="showIconClass"></i>
-        <span v-if="!dangerouslyUseHTMLString" class="message_title">{{ message }}</span>
-        <span v-else v-html="message" class="message_title"></span>
-      </div>
-      <i v-if="showClose" class="iconfont icon-guanbi" @click="close"></i>
-    </div>
-  </transition>
-</template>
-
 <script>
-export default {
-  computed: {
-    messageappClass() {
-      return ["messageapp", `r_message_${this.type}`, this.center ? "r_message_center" : ""];
-    },
-    showIconClass() {
-      return [
-        "iconfont",
-        "tipsicon",
-        this.type === "success"
-          ? "icon-gou1"
-          : this.type === "warning"
-          ? "icon-gantanhao"
-          : this.type === "error"
-          ? "icon-dacha"
-          : "icon-i"
-      ];
-    },
-    msgStyle() {
-      return {
-        "z-index": "9999",
-        top: `${this.offset}px`,
-        position: "fixed",
-        margin: "0 auto",
-        left: 0,
-        right: 0
-      };
-    }
-  },
-  data() {
-    return {
-      visible: true,
-      message: "这是一条信息",
+import {
+  defineComponent,
+  onMounted,
+  reactive,
+  getCurrentInstance,
+  toRefs,
+  computed
+} from "@vue/composition-api";
+export default defineComponent({
+  name: "message",
+  props: {},
+  setup() {
+    const instance = getCurrentInstance();
+    // console.log("instance",instance)
+    let state = reactive({
+      message: "",
       duration: 3000,
       type: "info",
       showClose: false,
@@ -59,36 +23,92 @@ export default {
       center: false,
       timer: null,
       dangerouslyUseHTMLString: null,
-      test:"你是大笨蛋"
+      test:"",
+      messageappClass: computed(() => {
+        return ["messageapp", `r_message_${state.type}`, state.center ? "r_message_center" : ""];
+      }),
+      showIconClass: computed(() => {
+        return [
+          "iconfont",
+          "tipsicon",
+          state.type === "success"
+            ? "icon-gou1"
+            : state.type === "warning"
+            ? "icon-gantanhao"
+            : state.type === "error"
+            ? "icon-dacha"
+            : "icon-i"
+        ];
+      }),
+      msgStyle: computed(() => {
+        return {
+          "z-index": "9999",
+          top: `${state.offset}px`,
+          position: "fixed",
+          margin: "0 auto",
+          left: 0,
+          right: 0
+        };
+      })
+    });
+    const close = () => {
+      state.closed = true;
+      instance.onClose(instance);
+    };
+    const startTimer = () => {
+      if (state.duration > 0) {
+        state.timer = setTimeout(() => {
+          if (!state.closed) {
+            close();
+          }
+        }, state.duration);
+      }
+    };
+    const clearTimer = () => {
+      clearTimeout(state.timer);
+    };
+    const handleAfterLeave = () => {
+      instance.$destroy(true);
+      instance.$el.parentNode.removeChild(instance.$el);
+    };
+    onMounted(() => {
+      startTimer();
+    });
+    return {
+      ...toRefs(state),
+      close,
+      startTimer,
+      clearTimer,
+      handleAfterLeave
     };
   },
-  mounted() {
-    this.startTimer();
-    console.log(this);
-  },
-  methods: {
-    close() {
-      this.closed = true;
-      this.onClose(this);
-    },
-    startTimer() {
-      if (this.duration > 0) {
-        this.timer = setTimeout(() => {
-          if (!this.closed) {
-            this.close();
-          }
-        }, this.duration);
-      }
-    },
-    clearTimer() {
-      clearTimeout(this.timer);
-    },
-    handleAfterLeave() {
-      this.$destroy(true);
-      this.$el.parentNode.removeChild(this.$el);
-    }
+  render() {
+    const closeIcon = this.showClose ? <i class="iconfont icon-guanbi" onClick={this.close}></i> : null;
+    const spanDom = !this.dangerouslyUseHTMLString ? (
+      <span class="message_title">{this.message}</span>
+    ) : (
+      <span class="message_title" vHtml={this.message}></span>
+    );
+
+    return (
+      <transition name="close_message_slide" onAfter-leave={this.handleAfterLeave}>
+        <div
+          class={this.messageappClass}
+          vShow={!this.closed}
+          onMouseenter={this.clearTimer}
+          onMouseleave={this.startTimer}
+          style={this.msgStyle}
+        >
+          <div class="message_content">
+            <i class={this.showIconClass}></i>
+            {spanDom}
+          </div>
+          {closeIcon}
+        </div>
+      </transition>
+    );
   }
-};
+});
 </script>
 
 <style lang="scss">

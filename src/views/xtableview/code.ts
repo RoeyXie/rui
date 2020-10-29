@@ -48,7 +48,7 @@ const code2: string = `<template>
     :columns="columns"
     :search-params="customizeForm"
   >
-    <template v-slot:searchform>
+    <template #searchform>
       <el-form :inline="true" :model="customizeForm" size="small">
         <el-form-item label="姓名">
           <el-input v-model="customizeForm.name" placeholder="请输入姓名"></el-input>
@@ -476,11 +476,11 @@ const code6: string = `<template>
     :search-form-cfg="searchFormCfg"
     :columns="columns"
   >
-    <template slot="date" slot-scope="{ row }">
+    <template #date="{ row }">
       <i class="el-icon-time"></i>
       <span> {{ row.date }} </span>
     </template>
-    <template slot="city" slot-scope="{ row }">
+    <template #city="{ row }">
       <el-tag size="medium">{{ row.city + "市" }}</el-tag>
     </template>
   </x-table>

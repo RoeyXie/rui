@@ -2,12 +2,11 @@
  * @Author: xry
  * @Description:
  * @Date: 2019-12-23 15:06:29
- * @LastEditTime: 2020-10-20 15:43:28
+ * @LastEditTime: 2020-10-21 10:24:44
  * @FilePath: /dev2/Users/roey/Desktop/Hui/rui/src/views/layoutview/index.vue
 -->
 <script>
 import code from "./code.ts";
-import axios from "axios";
 import { defineComponent, reactive, toRefs, onMounted } from "@vue/composition-api";
 
 export default defineComponent({

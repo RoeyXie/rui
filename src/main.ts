@@ -2,8 +2,8 @@
  * @Author: xry
  * @Description:
  * @Date: 2020-08-29 22:25:49
- * @LastEditTime: 2020-10-20 15:41:11
- * @FilePath: /dev2/Users/roey/Desktop/Hui/rui/src/main.ts
+ * @LastEditTime: 2020-10-21 19:38:38
+ * @FilePath: /Hui/rui/src/main.ts
  */
 import Vue from "vue";
 import App from "./App.vue";
@@ -20,7 +20,7 @@ import grobalComponont from "./components/index";
 Vue.use(grobalComponont);
 
 import axios from "axios";
-axios.defaults.baseURL = process.env.NODE_ENV === 'development'?'/local':'';
+axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "/local" : "";
 
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";

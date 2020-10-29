@@ -2,8 +2,8 @@
  * @Author: xry
  * @Description:
  * @Date: 2020-09-16 11:42:45
- * @LastEditTime: 2020-10-20 15:45:19
- * @FilePath: /dev2/Users/roey/Desktop/Hui/rui/src/views/xtableview/index.vue
+ * @LastEditTime: 2020-10-23 20:02:57
+ * @FilePath: /Hui/rui/src/views/xtableview/index.vue
 -->
 <template>
   <div class="xtableview">
@@ -135,11 +135,11 @@
             :columns="columns"
             :dualfuns="dualfuns"
           >
-            <template slot="date" slot-scope="{ row }">
+            <template #date="{ row }">
               <i class="el-icon-time"></i>
               <span> {{ row.date }} </span>
             </template>
-            <template slot="city" slot-scope="{ row }">
+            <template #city="{ row }">
               <el-tag size="medium">{{ row.city + "市" }}</el-tag>
             </template>
           </x-table>

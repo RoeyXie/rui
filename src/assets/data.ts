@@ -234,6 +234,13 @@ export const menuList: MenuList[] = [
         name: "Scroll 滚动",
         url: "/scrollview",
         list: []
+      },
+      {
+        menuId: 75,
+        parentId: 7,
+        name: "Test 测试",
+        url: "/testview",
+        list: []
       }
     ]
   }

@@ -2,6 +2,7 @@
 node_modules
 /dist
 /node/assets
+/src/views/testview
 
 
 # local env files

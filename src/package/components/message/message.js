@@ -2,14 +2,14 @@
  * @Author: xry
  * @Description:
  * @Date: 2020-09-03 19:29:38
- * @LastEditTime: 2020-09-09 01:24:52
- * @FilePath: /Hui/rui/src/package/components/message/message.js
+ * @LastEditTime: 2020-10-21 09:58:40
+ * @FilePath: /dev2/Users/roey/Desktop/Hui/rui/src/package/components/message/message.js
  */
 
 /// <reference path="./message.d.ts" />
 
 import Vue from "vue";
-import Main from "./Message3.vue";
+import Main from "./Message.vue";
 let MessageConstructor = Vue.extend(Main); // 创建构造器
 
 let instance;
@@ -28,25 +28,20 @@ const Msg = function (options) {
   options.onClose = function () {
     Msg.close(id, userOnClose);
   };
-  options.test = "这是我的测试"
-
-  // console.log("options",options)
-  // instance = new MessageConstructor({
-  //   data: options
-  // }); // 使用构造器创建实例
-  instance = new MessageConstructor(); // 使用构造器创建实例
-  Object.entries(options).forEach(([key,val])=>{
-    instance[key] = val;
-  })
-  instance.id = id;
-  instance.$mount(); // 实例挂载
-  document.body.appendChild(instance.$el);
 
   let offset = options.offset || 20;
   instances.forEach(item => {
     offset += item.$el.offsetHeight + 16;
   });
   options.offset = offset;
+
+  instance = new MessageConstructor(); // 使用构造器创建实例
+  Object.entries(options).forEach(([key, val]) => {
+    instance[key] = val;
+  })
+  instance.id = id;
+  instance.$mount(); // 实例挂载
+  document.body.appendChild(instance.$el);
 
   instances.push(instance);
   return instance;

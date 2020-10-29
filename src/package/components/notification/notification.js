@@ -1,3 +1,10 @@
+/*
+ * @Author: xry
+ * @Description:
+ * @Date: 2020-09-04 19:42:11
+ * @LastEditTime: 2020-10-21 10:23:10
+ * @FilePath: /dev2/Users/roey/Desktop/Hui/rui/src/package/components/notification/notification.js
+ */
 import Vue from 'vue'
 import Notification from './Notification.vue'
 let NtfctConstructor = Vue.extend(Notification)
@@ -16,15 +23,14 @@ const Ntf = function (options) {
     Ntf.close(id, userOnClose)
   }
 
-  instance = new NtfctConstructor({
-    data: options
-  })
-
   instances
     .filter(item => item.position === position)
     .forEach(item => (offset += item.$el.offsetHeight + 16))
-
   options.offset = offset
+
+  instance = new NtfctConstructor({
+    data: options
+  })
   instance.id = id
   instances.push(instance)
   instance.$mount() // 挂载
